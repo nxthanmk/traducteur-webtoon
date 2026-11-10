@@ -1,0 +1,65 @@
+.tw-bubble {
+  position: absolute;
+  z-index: 2147483647;
+  max-width: 340px;
+  min-width: 120px;
+  padding: 10px 14px;
+  background: #1f2937;
+  color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  text-align: left;
+}
+
+.tw-bubble .tw-original {
+  color: #9ca3af;
+  font-size: 12px;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #374151;
+}
+
+.tw-bubble .tw-translation {
+  font-weight: 600;
+}
+
+.tw-bubble .tw-loading {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.tw-bubble .tw-error {
+  color: #fca5a5;
+}
+
+/* Mode "tracer une zone" */
+.tw-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  cursor: crosshair;
+  background: rgba(0, 0, 0, 0.25);
+  user-select: none;
+}
+
+.tw-overlay .tw-box {
+  position: absolute;
+  display: none;
+  border: 2px dashed #60a5fa;
+  background: rgba(96, 165, 250, 0.15);
+  box-sizing: border-box;
+}
+
+.tw-overlay .tw-hint {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  background: #1f2937;
+  color: #f9fafb;
+  border-radius: 8px;
+  font: 14px system-ui, -apple-system, "Segoe UI", sans-serif;
+  pointer-events: none;
+}

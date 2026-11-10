@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      width: 270px;
+      margin: 0;
+      padding: 14px;
+      font: 14px system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #111827;
+    }
+    h1 { font-size: 15px; margin: 0 0 12px; }
+    label { display: block; margin-bottom: 10px; }
+    label span { display: block; font-size: 12px; color: #6b7280; margin-bottom: 3px; }
+    select { width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #d1d5db; }
+    .row { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+    #ocr {
+      width: 100%;
+      padding: 9px;
+      margin-bottom: 14px;
+      border: 0;
+      border-radius: 8px;
+      background: #2563eb;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #ocr:hover { background: #1d4ed8; }
+    .hint { font-size: 12px; color: #6b7280; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Traducteur Webtoon</h1>
+
+  <button id="ocr">Traduire une zone de l'image</button>
+
+  <label>
+    <span>Langue du webtoon</span>
+    <select id="source">
+      <option value="es">Espagnol</option>
+      <option value="auto">Détection automatique</option>
+      <option value="en">Anglais</option>
+      <option value="pt">Portugais</option>
+      <option value="it">Italien</option>
+      <option value="de">Allemand</option>
+    </select>
+  </label>
+
+  <label>
+    <span>Traduire vers</span>
+    <select id="target">
+      <option value="fr">Français</option>
+      <option value="en">Anglais</option>
+      <option value="es">Espagnol</option>
+      <option value="pt">Portugais</option>
+      <option value="ar">Arabe</option>
+    </select>
+  </label>
+
+  <div class="row">
+    <input type="checkbox" id="enabled" />
+    <label for="enabled" style="margin:0">Traduire le texte sélectionné</label>
+  </div>
+
+  <p class="hint">Raccourci pour tracer une zone : <b>Alt + Shift + T</b> (modifiable dans chrome://extensions/shortcuts).</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
